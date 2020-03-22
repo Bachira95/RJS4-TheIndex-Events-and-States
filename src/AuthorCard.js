@@ -5,7 +5,10 @@ const AuthorCard = props => {
   const authorName = `${author.first_name} ${author.last_name}`;
   return (
     <div className="col-lg-4 col-md-6 col-12">
-      <div className="card">
+      {/* for task2.4 they asked to add onClick, so when we click on a card we will call the selectAuthor function,
+      from the props,but because I have to pass the author obj as an argument,
+      I have to put it in a function, then I can call it and pass it the parameter author */}
+      <div className="card" onClick={ ()=>props.selectAuthor(author) }>
         <div className="image">
           <img
             className="card-img-top img-fluid"
